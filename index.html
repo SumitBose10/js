@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <script src="fourth.js" defer></script> <!-- defer ensures script loads after HTML -->
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 240px;
+    }
+
+    .display {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 10px;
+      text-align: right;
+      padding: 10px;
+      font-size: 24px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #eee;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #d4d4d4;
+      cursor: pointer; /* ✅ Fixed cursor */
+    }
+  </style>
 </head>
 <body>
-    <script src="fourth.js"></script>
+
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">+</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">-</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">*</button>
+        <button class="number">0</button>
+        <button class="number">.</button>
+        <button id="submit">=</button>
+        <button class="operator">/</button>
+    </div>
+</div>
+
 </body>
 </html>
